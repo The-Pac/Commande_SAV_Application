@@ -1,0 +1,12 @@
+
+
+Version:	3.5
+CmdLine:	C:\Users\DI\Documents\Stage dev\Commande SAV Application\Commande SAV.exe --l4j-debug
+WOW64:		yes
+Working dir:	C:\Users\DI\Documents\Stage dev\Commande SAV Application\.
+Bundled JRE:	runtime\jre1.8.0_271
+Check launcher:	C:\Users\DI\Documents\Stage dev\Commande SAV Application\runtime\jre1.8.0_271\bin\javaw.exe (OK)
+Launcher:	C:\Users\DI\Documents\Stage dev\Commande SAV Application\runtime\jre1.8.0_271\bin\javaw.exe
+Launcher args:	-jar "C:\Users\DI\Documents\Stage dev\Commande SAV Application\Commande SAV.exe"
+Args length:	80/32768 chars
+Exit code:	0

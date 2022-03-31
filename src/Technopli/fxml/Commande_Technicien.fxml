@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="180.0" prefWidth="450.0" styleClass="background" stylesheets="@../css/Style.css" xmlns="http://javafx.com/javafx/8.0.271" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Technopli.Controller_Commande_Technicien">
+   <children>
+      <VBox layoutX="50.0" layoutY="-50.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="60.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="46.0" prefWidth="560.0" spacing="5.0" styleClass="box" stylesheets="@../css/Style.css">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="43.0" prefWidth="152.0" spacing="5.0">
+                     <children>
+                        <Label text="Prise en Compte:" />
+                        <CheckBox fx:id="prise_En_Compte_MAG_Checkbox" mnemonicParsing="false" stylesheets="@../css/Style.css" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="43.0" prefWidth="220.0" spacing="5.0">
+                     <children>
+                        <Label text="Prêt:" />
+                        <TextField fx:id="pret_TextField" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <VBox alignment="CENTER" prefHeight="73.0" prefWidth="560.0">
+               <children>
+                  <Label fx:id="information_Label" />
+                  <Button fx:id="appliquer_Bouton" mnemonicParsing="false" onAction="#appliquer_Bouton_Action" styleClass="button_utilisateur" text="Appliquer" />
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER" layoutX="245.0" layoutY="-22.0" prefHeight="50.0" prefWidth="570.0" spacing="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label text="Partie Technicien:" textAlignment="JUSTIFY">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="50.0" prefWidth="181.0">
+               <children>
+                  <Label text="Commande N°:" />
+                  <Label fx:id="commande_Numero" />
+               </children>
+            </HBox>
+            <Button fx:id="retour_Bouton" mnemonicParsing="false" onAction="#retour_Bouton_Action" styleClass="button_utilisateur" text="Retour" />
+         </children>
+         <padding>
+            <Insets left="10.0" right="10.0" />
+         </padding>
+      </HBox>
+   </children>
+</AnchorPane>

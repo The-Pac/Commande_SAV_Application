@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" styleClass="background" stylesheets="@../css/Style.css" xmlns="http://javafx.com/javafx/8.0.271" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Technopli.Controller_Filtre">
+   <children>
+      <Button fx:id="retour_Bouton" layoutX="518.0" layoutY="296.0" mnemonicParsing="false" onAction="#retour_Bouton_Action" text="Retour" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+      <VBox layoutX="200.0" layoutY="137.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="30.0">
+         <children>
+            <HBox>
+               <children>
+                  <VBox prefHeight="65.0" prefWidth="210.0" spacing="5.0">
+                     <children>
+                        <GridPane minHeight="-Infinity" minWidth="-Infinity" vgap="5.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="ALWAYS" maxWidth="92.0" minWidth="10.0" prefWidth="72.0" />
+                            <ColumnConstraints hgrow="ALWAYS" maxWidth="134.0" minWidth="10.0" prefWidth="134.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="-Infinity" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
+                            <RowConstraints minHeight="-Infinity" prefHeight="30.0" vgrow="ALWAYS" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="Reference:" />
+                              <TextField fx:id="reference_SAP_TextField" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="93.0" GridPane.columnIndex="1" />
+                              <Label text="Client:" GridPane.rowIndex="1" />
+                              <ComboBox fx:id="choix_Client_Filtre_Combobox" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="27.0" prefWidth="121.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </VBox>
+                  <VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="65.0" prefWidth="396.0" spacing="5.0">
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                     <children>
+                        <GridPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="65.0" prefWidth="379.0" VBox.vgrow="ALWAYS">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="86.0" minWidth="10.0" prefWidth="71.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="124.0" minWidth="10.0" prefWidth="103.0" />
+                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="87.0" minWidth="10.0" prefWidth="61.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="190.0" minWidth="10.0" prefWidth="157.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints maxHeight="37.0" minHeight="0.0" prefHeight="32.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <RadioButton fx:id="entre_le_RadioBouton" mnemonicParsing="false" text="Entre le:">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="switch_Datepicker_ToggleGroup" />
+                                 </toggleGroup></RadioButton>
+                              <RadioButton fx:id="le_RadioBouton" mnemonicParsing="false" text="le:" toggleGroup="$switch_Datepicker_ToggleGroup" GridPane.rowIndex="1" />
+                              <DatePicker fx:id="debut_Date_DatePicker" minHeight="-Infinity" minWidth="-Infinity" prefWidth="100.0" GridPane.columnIndex="1" />
+                              <Label text="au" GridPane.columnIndex="2" />
+                              <DatePicker fx:id="fin_Date_DatePicker" prefWidth="100.0" GridPane.columnIndex="3" />
+                              <DatePicker fx:id="date_DatePicker" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Button fx:id="export_Excel_Bouton" mnemonicParsing="false" onAction="#export_Excel_Bouton_Action" text="Export Excel" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                              <Button fx:id="reset_Filtre_Bouton" mnemonicParsing="false" onAction="#reset_Filtre_Bouton_Action" text="Reset" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <TableView fx:id="tableau_Commande" stylesheets="@../css/Style.css" VBox.vgrow="SOMETIMES">
+               <columns>
+                  <TableColumn fx:id="client_TableColonne" editable="false" minWidth="-Infinity" text="Client" />
+                  <TableColumn fx:id="id_Commande_TableColonne" editable="false" minWidth="-Infinity" prefWidth="50.0" resizable="false" sortType="DESCENDING" text="ID" />
+                  <TableColumn fx:id="numero_Commande_TableColonne" editable="false" minWidth="-Infinity" prefWidth="120.0" resizable="false" sortable="false" text="N° Commande" />
+                  <TableColumn fx:id="date_Commande_TableColonne" editable="false" minWidth="-Infinity" prefWidth="120.0" resizable="false" text="Date Commande" />
+                  <TableColumn fx:id="date_Saisi_Colonne" editable="false" minWidth="-Infinity" prefWidth="90.0" resizable="false" text="Date Saisi" />
+                  <TableColumn fx:id="reference_SAP_TableColonne" editable="false" minWidth="-Infinity" prefWidth="130.0" resizable="false" sortable="false" text="Référence SAP" />
+                  <TableColumn fx:id="numero_Article_TableColonne" editable="false" minWidth="-Infinity" prefWidth="110.0" resizable="false" text="N° Article" />
+                  <TableColumn fx:id="quantite_Commande_TableColonne" editable="false" minWidth="-Infinity" prefWidth="150.0" resizable="false" text="Quantité commandée" />
+                  <TableColumn fx:id="quantite_Livrer_TableColonne" editable="false" minWidth="-Infinity" prefWidth="120.0" resizable="false" text="Quantité à livrer" />
+                  <TableColumn fx:id="prise_En_Compte_MAG_TableColonne" editable="false" minWidth="-Infinity" prefWidth="40.0" resizable="false" sortable="false" text="MAG" />
+                  <TableColumn fx:id="pret_TableColonne" editable="false" minWidth="-Infinity" prefWidth="70.0" resizable="false" text="Prêt" />
+                  <TableColumn fx:id="date_Pret_TableColonne" editable="false" minWidth="-Infinity" prefWidth="90.0" resizable="false" text="Date prêt" />
+                  <TableColumn fx:id="bL_TableColonne" editable="false" minWidth="-Infinity" prefWidth="40.0" resizable="false" sortable="false" text="B.L." />
+                  <TableColumn fx:id="livre_TableColonne" editable="false" minWidth="-Infinity" prefWidth="40.0" resizable="false" sortable="false" text="Livré" />
+                  <TableColumn fx:id="date_Livraison_TableColonne" editable="false" minWidth="-Infinity" prefWidth="100.0" resizable="false" sortable="false" text="Date livraison" />
+                  <TableColumn fx:id="temps_Gestion_Commande_TableColonne" editable="false" minWidth="-Infinity" prefWidth="180.0" resizable="false" sortable="false" text="Temps gestion commande" />
+                  <TableColumn fx:id="retard_TableColonne" editable="false" minWidth="-Infinity" prefWidth="90.0" resizable="false" sortable="false" text="Retard" />
+                  <TableColumn fx:id="observation_TableColonne" editable="false" minWidth="-Infinity" prefWidth="150.0" resizable="false" sortable="false" text="Observation" />
+                  <TableColumn fx:id="annule_TableColonne" editable="false" minWidth="-Infinity" prefWidth="50.0" resizable="false" sortable="false" text="Annulé" />
+               </columns>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+               </VBox.margin>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

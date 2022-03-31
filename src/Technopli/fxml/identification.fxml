@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="270.0" prefWidth="550.0" styleClass="background" stylesheets="@../css/Style.css" xmlns="http://javafx.com/javafx/8.0.271" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Technopli.Controller_Login">
+   <children>
+      <Button fx:id="quitter_Bouton" alignment="CENTER" contentDisplay="CENTER" layoutX="408.0" layoutY="18.0" mnemonicParsing="false" onAction="#quitter_Bouton_Action" prefHeight="40.0" prefWidth="80.0" styleClass="button_utilisateur" text="Quitter" textAlignment="JUSTIFY" wrapText="true" AnchorPane.bottomAnchor="220.0" AnchorPane.leftAnchor="400.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+      <ImageView fitHeight="70.0" fitWidth="176.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="12.0" AnchorPane.topAnchor="12.0">
+         <image>
+            <Image url="@../img/Technopli_Groupe_BC_RVB_Isolé.png" />
+         </image>
+      </ImageView>
+      <VBox layoutX="225.0" layoutY="-64.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="70.0">
+         <children>
+            <HBox fx:id="connexion_Hbox" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+               <children>
+                  <VBox alignment="CENTER" spacing="10.0">
+                     <children>
+                        <Button fx:id="secretaire_Bouton" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#secretaire_Bouton_Action" prefHeight="110.0" prefWidth="110.0" styleClass="image_utilisateur" stylesheets="@../css/Style.css" />
+                        <Label styleClass="box" stylesheets="@../css/Style.css" text="Secretaire">
+                           <padding>
+                              <Insets left="5.0" right="5.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" spacing="10.0">
+                     <children>
+                        <Button fx:id="technicien_Bouton" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#technicien_Bouton_Action" prefHeight="110.0" prefWidth="110.0" styleClass="image_utilisateur" stylesheets="@../css/Style.css" />
+                        <Label styleClass="box" stylesheets="@../css/Style.css" text="Technicien">
+                           <padding>
+                              <Insets left="5.0" right="5.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" spacing="10.0">
+                     <children>
+                        <Button fx:id="superviseur_Bouton" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#superviseur_Bouton_action" prefHeight="110.0" prefWidth="110.0" styleClass="image_utilisateur" stylesheets="@../css/Style.css" />
+                        <Label styleClass="box" stylesheets="@../css/Style.css" text="Superviseur">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <padding>
+                              <Insets left="5.0" right="5.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

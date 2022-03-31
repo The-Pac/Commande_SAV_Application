@@ -1,0 +1,28 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Technopli_stage_SAV:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Technopli_stage_SAV_jar</output-path>
+    <root id="archive" name="Technopli_stage_SAV.jar">
+      <element id="module-output" name="Technopli_stage_SAV" />
+      <element id="extracted-dir" path="$PATH_TO_FX_8$/dt.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PATH_TO_FX_8$/tools.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PATH_TO_FX_8$/sa-jdi.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PATH_TO_FX_8$/jconsole.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PATH_TO_FX_8$/packager.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PATH_TO_FX_8$/javafx-mx.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PATH_TO_FX_8$/ant-javafx.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/runtime/javafx-sdk-13/lib/src.zip" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/runtime/javafx-sdk-13/lib/javafx-swt.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/runtime/javafx-sdk-13/lib/javafx.web.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/runtime/javafx-sdk-13/lib/javafx.base.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/runtime/javafx-sdk-13/lib/javafx.fxml.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/runtime/javafx-sdk-13/lib/javafx.media.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/runtime/javafx-sdk-13/lib/javafx.swing.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/runtime/javafx-sdk-13/lib/javafx.controls.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/runtime/javafx-sdk-13/lib/javafx.graphics.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/Technopli/lib/mysql-connector-java-5.1.19-bin.jar" path-in-jar="/" />
+      <element id="library" level="project" name="mysql-connector-java-5.1.19-bin" />
+      <element id="library" level="project" name="lib" />
+      <element id="library" level="project" name="org.apache.poi:poi:3.15" />
+    </root>
+  </artifact>
+</component>
